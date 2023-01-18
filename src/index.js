@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+// import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Chart, ArcElement, Tooltip, Legend, Title } from 'chart.js';
+
+import { ProductsProvider } from './contexts/productsContext';
+import { CategoriesProvider } from './contexts/categoriesContext';
+
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+Chart.register(ArcElement, Tooltip, Legend, Title);
+
+const app = document.getElementById('root');
+const root = createRoot(app);
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <ProductsProvider>
+    <CategoriesProvider>
+      <App />
+    </CategoriesProvider>
+  </ProductsProvider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
