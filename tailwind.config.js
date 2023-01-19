@@ -9,6 +9,7 @@ module.exports = {
       lg: '980px',
       xl: '1024px',
       '2xl': '1224px',
+      surface: '540px',
     },
   },
   plugins: [require('tailwind-scrollbar-hide')],
