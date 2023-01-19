@@ -19,7 +19,7 @@ export default function App() {
     <div className='relative'>
       <Nav />
       <div
-        className={`w-full flex justify-end items-end flex-wrap space-x-2 space-y-6 px-12 py-12 lg:px-14 xl:px-16 2xl:px-20 md:space-x-4 lg:space-x-6 xl:space-x-8 md:space-y-8 lg:space-y-9 xl:space-y-12`}
+        className={`mx-auto flex w-full max-w-[424px] flex-wrap items-end justify-center space-x-2 space-y-6 px-2 pt-10 pb-2 sm:space-x-4 md:max-w-[768px] md:space-x-6 xl:max-w-full`}
       >
         {filteredProducts.map(
           ({ id, title, price, image, category, description }) => (

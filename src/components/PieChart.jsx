@@ -33,18 +33,15 @@ export const PieChart = () => {
           countOfEachCategoryProduct.mens,
           countOfEachCategoryProduct.womens,
         ],
-        backgroundColor: ['red', 'orange', 'yellow', 'green'],
+        backgroundColor: ['#d22b2b', '#e97451', '#ffc300', '#1fcecb'],
       },
     ],
   };
-
-  console.log(chartData);
 
   return (
     <Pie
       data={chartData}
       options={{
-        responsive: true,
         plugins: {
           legend: {
             position: 'top',
